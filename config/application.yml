@@ -2,12 +2,20 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh
+        include: refresh,health,info,prometheus
+  endpoint:
+    prometheus:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
 
 runtime:
   props:
-    unavailable: true
-    latency-in-milli: 10
+    unavailable: false
+    min-latency-in-milli: 10
+    max-latency-in-milli: 5000
 
 server:
   port: 8080

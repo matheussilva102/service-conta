@@ -11,7 +11,9 @@ public class PropertiesConfig {
 
 	private boolean unavailable;
 
-	private long latencyInMilli;
+	private long minLatencyInMilli;
+
+	private long maxLatencyInMilli;
 
 	public boolean isUnavailable() {
 		return this.unavailable;
@@ -21,13 +23,20 @@ public class PropertiesConfig {
 		this.unavailable = unavailable;
 	}
 
-	public long getLatencyInMilli() {
-		return this.latencyInMilli;
+	public long getMinLatencyInMilli() {
+		return this.minLatencyInMilli;
 	}
 
-	public void setLatencyInMilli(long latencyInMilli) {
-		this.latencyInMilli = latencyInMilli;
+	public void setMinLatencyInMilli(long minLatencyInMilli) {
+		this.minLatencyInMilli = minLatencyInMilli;
 	}
 
+	public long getMaxLatencyInMilli() {
+		return this.maxLatencyInMilli;
+	}
+
+	public void setMaxLatencyInMilli(long maxLatencyInMilli) {
+		this.maxLatencyInMilli = maxLatencyInMilli;
+	}
 
 }

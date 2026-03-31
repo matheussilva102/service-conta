@@ -2,6 +2,7 @@ package br.com.mbausp.eda.product.conta.route;
 
 import java.time.LocalDateTime;
 import java.util.Map;
+import java.util.concurrent.ThreadLocalRandom;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.ValidationException;
@@ -84,7 +85,10 @@ public class ContaRoute extends RouteBuilder {
 	        })
 	        .process(ex -> {
 	        	// simular latencia
-	        	Thread.sleep(ContaRoute.this.props.getLatencyInMilli());
+	        	var min = (int) ContaRoute.this.props.getMinLatencyInMilli();
+	        	var max = (int) ContaRoute.this.props.getMaxLatencyInMilli();
+	        	var randomNum = ThreadLocalRandom.current().nextInt(min, max);
+	        	Thread.sleep(randomNum);
 	        })
         .end();
 

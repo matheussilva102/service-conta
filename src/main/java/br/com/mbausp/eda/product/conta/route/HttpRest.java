@@ -15,15 +15,13 @@ public class HttpRest extends RouteBuilder {
         restConfiguration()
             .component("platform-http")
             .bindingMode(RestBindingMode.json)
-            .contextPath("/api")
+            .contextPath("/accounts")
             .apiContextPath("/api-doc")
-            .apiProperty("api.title", "User API")
-            .apiProperty("api.version", "1.2.3")
-            // and enable CORS
-            .apiProperty("cors", "true");
+            .apiProperty("api.title", "Conta API")
+            .apiProperty("api.version", "1.0.0");
 
-        rest("/accounts")
-	        .description("contas de usuário")
+        rest()
+	        .description("contas de cliente")
 	        .get("/{id}")
 	            .to(RouteEnum.DIRECT_CONSULTAR_CONTA.getRoute())
 	        .post("/")
