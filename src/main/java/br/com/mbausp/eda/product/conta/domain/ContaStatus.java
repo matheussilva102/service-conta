@@ -1,4 +1,4 @@
-package br.com.mbausp.eda.product.conta.entity;
+package br.com.mbausp.eda.product.conta.domain;
 
 public enum ContaStatus {
 

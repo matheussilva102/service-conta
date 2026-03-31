@@ -2,6 +2,7 @@ package br.com.mbausp.eda.product.conta.entity;
 
 import java.time.LocalDateTime;
 
+import br.com.mbausp.eda.product.conta.domain.ContaStatus;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

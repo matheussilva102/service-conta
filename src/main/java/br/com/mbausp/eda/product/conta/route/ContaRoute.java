@@ -9,10 +9,10 @@ import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
 import br.com.mbausp.eda.product.conta.config.PropertiesConfig;
+import br.com.mbausp.eda.product.conta.domain.ContaStatus;
 import br.com.mbausp.eda.product.conta.domain.ContaUsuario;
 import br.com.mbausp.eda.product.conta.domain.ContaUsuarioPayload;
 import br.com.mbausp.eda.product.conta.entity.ContaClienteEntity;
-import br.com.mbausp.eda.product.conta.entity.ContaStatus;
 import br.com.mbausp.eda.product.conta.exception.NotFoundException;
 import br.com.mbausp.eda.product.conta.exception.UnavailableException;
 import br.com.mbausp.eda.product.conta.repository.ContaClienteRepository;

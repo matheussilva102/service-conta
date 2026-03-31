@@ -1,0 +1,17 @@
+-- Criar múltiplos databases
+CREATE DATABASE db_conta;
+CREATE DATABASE db_auto;
+CREATE DATABASE db_emprestimo;
+CREATE DATABASE db_seguro;
+
+-- (opcional) criar usuários
+CREATE USER userconta WITH PASSWORD '123456';
+CREATE USER userauto WITH PASSWORD '123456';
+CREATE USER useremprestimo WITH PASSWORD '123456';
+CREATE USER userseguro WITH PASSWORD '123456';
+
+-- (opcional) permissões
+GRANT ALL PRIVILEGES ON db_conta TO userconta;
+GRANT ALL PRIVILEGES ON db_auto TO userauto;
+GRANT ALL PRIVILEGES ON db_emprestimo TO useremprestimo;
+GRANT ALL PRIVILEGES ON DATABASEdb_seguro TO userseguro;

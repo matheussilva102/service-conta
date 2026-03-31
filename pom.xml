@@ -104,6 +104,34 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-dependency-plugin</artifactId>
+			    <executions>
+			        <execution>
+			            <id>copy-and-rename-jar</id>
+			            <phase>package</phase>
+			            <goals>
+			                <goal>copy</goal>
+			            </goals>
+			            <configuration>
+			                <artifactItems>
+			                    <artifactItem>
+			                        <groupId>${project.groupId}</groupId>
+			                        <artifactId>${project.artifactId}</artifactId>
+			                        <version>${project.version}</version>
+			                        <type>jar</type>
+			                        <!-- Define new name here -->
+			                        <destFileName>app.jar</destFileName>
+			                    </artifactItem>
+			                </artifactItems>
+			                <!-- Define output directory here -->
+			                <outputDirectory>/home/matheus/repository/mba/service-conta</outputDirectory>
+			            </configuration>
+			        </execution>
+			    </executions>
+			</plugin>
+			
         </plugins>
     </build>
 
