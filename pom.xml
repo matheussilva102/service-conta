@@ -94,6 +94,11 @@
             <artifactId>postgresql</artifactId>
         </dependency>
 
+		<dependency>
+		  <groupId>org.apache.camel.springboot</groupId>
+		  <artifactId>camel-openapi-java-starter</artifactId>
+		</dependency>
+
     </dependencies>
 
     <build>

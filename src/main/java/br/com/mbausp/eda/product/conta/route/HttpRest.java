@@ -15,7 +15,12 @@ public class HttpRest extends RouteBuilder {
         restConfiguration()
             .component("platform-http")
             .bindingMode(RestBindingMode.json)
-            .contextPath("/api") ;
+            .contextPath("/api")
+            .apiContextPath("/api-doc")
+            .apiProperty("api.title", "User API")
+            .apiProperty("api.version", "1.2.3")
+            // and enable CORS
+            .apiProperty("cors", "true");
 
         rest("/accounts")
 	        .description("contas de usuário")
