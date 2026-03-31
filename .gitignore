@@ -16,6 +16,7 @@ target/
 .class
 bin/
 tmp/
+bin
 
 ### IntelliJ IDEA ###
 .idea
